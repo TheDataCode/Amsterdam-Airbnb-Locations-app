@@ -26,7 +26,7 @@ dataframe = dataframe[dataframe["Price"] <= 200]
 # Display as integer
 dataframe["Airbnb Listing ID"] = dataframe["Airbnb Listing ID"].astype(int)
 # Round of values
-dataframe["Price"] = "EUR " + dataframe["Price"].round(2).astype(str) # <--- CHANGE THIS EURO  IF YOU CHOSE CURRENCY OTHER THAN Canadian dollars
+dataframe["Price"] = "EUR " + dataframe["Price"].round(2).astype(str) 
 # Rename the number to a string
 dataframe["Location"] = dataframe["Location"].replace(
     {1.0: "To visit", 0.0: "Airbnb listing"}
@@ -34,7 +34,7 @@ dataframe["Location"] = dataframe["Location"].replace(
 
 # Display dataframe and text
 st.dataframe(dataframe)
-st.markdown("Below is a map showing my tourist site to visit with a dark blue dot and all the Airbnb listings close to the site with a light blue dot.") 
+st.markdown("Below is a map showing my tourist site to visit (Vondel Park in Amsterdam) with a dark blue dot and all the Airbnb listings close to the site with a light blue dot.") 
 
 # Create the plotly express figure
 fig = px.scatter_mapbox(
