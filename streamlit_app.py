@@ -3,8 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 # Display title and text
-st.title("Data and visualisation")
-st.markdown("Here we can see the dataframe created.")
+st.title("Data and Map Visualisation")
 
 # Read dataframe
 dataframe = pd.read_csv(
